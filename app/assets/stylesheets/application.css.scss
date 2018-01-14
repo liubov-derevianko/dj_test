@@ -1,0 +1,60 @@
+@import "semantic-ui";
+.body{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.main_content{
+  flex: 1;
+  padding-bottom: 30px;
+}
+
+.footer{
+  padding: 20px 0 20px 0;
+  margin-top: 1%;
+  background-color: #00B5AD;
+  &.stroke{
+    border-top: 1px solid #dcdcdc;
+  }
+}
+
+.footer_links{
+  margin-left: 36.5% !important;
+  a{
+    //color: rgba(255,255,255,0.7) !important;
+  }
+}
+
+.main_panel {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 30px;
+}
+
+.main_panel_right_menu {
+  padding-right: 0 !important;
+  margin-left: 50px !important;
+  margin-right: 20px !important;
+}
+.site_name {
+  padding-left: 0 !important;
+  font-size: 30px;
+  margin-left: 50px !important;
+  margin-right: 50px !important;
+  &:hover {
+    background: none !important;
+  }
+  font-weight: bold !important;
+}
+
+.olt_show_main_info{
+  text-align: left;
+}
+
+.negative_count{
+  color: red;
+}
+
+.positive_count{
+  color: limegreen;
+}

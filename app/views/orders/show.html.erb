@@ -1,0 +1,11 @@
+<div class="ui container">
+  <div class="ui piled segment">
+    <h2 class="ui centered header">Order info</h2>
+    <div class="ui divider"></div>
+    <p class="olt_show_main_info">Name: <%= @model.name%></p>
+    <p class="olt_show_main_info">Owner Email<%= @model.owner_email%></p>
+    <p class="olt_show_main_info">State: <%= @model.state%></p>
+    <%= link_to "Processed order", update_state_path(id: @model.id, state: 'processed'), class: 'ui button'%>
+    <%= link_to "Delivered order", update_state_path(id: @model.id, state: 'delivered'), class: 'ui button' %>
+  </div>
+</div>

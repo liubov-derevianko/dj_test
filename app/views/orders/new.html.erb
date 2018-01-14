@@ -1,0 +1,30 @@
+<div class="ui container">
+  <div class="ui three column grid">
+    <div class="row">
+      <div class="column">
+      </div>
+      <div class="column">
+        <h2 class="ui green header centered">
+          <div class="ui teal horizontal label">Create Order</div>
+        </h2>
+        <%= form_for @form, url:  orders_path, method: :post, as: :order, html: { class: 'ui large form' } do |f| %>
+          <div class="ui container">
+            <div class="field">
+              <%= f.label :name, 'Name' %>
+              <%= f.text_field :name, placeholder: 'Name', class: 'ui left input fluid host_input'%>
+            </div>
+            <div class="field">
+              <%= f.label :owner_email, 'Owner Email' %>
+              <%= f.text_field :owner_email, placeholder: 'owner_email@example.com', class: 'ui left input fluid host_input'%>
+            </div>
+            <div>
+              <%= f.submit 'Create', class: 'ui large teal fluid submit button ' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="column">
+      </div>
+    </div>
+  </div>
+</div>

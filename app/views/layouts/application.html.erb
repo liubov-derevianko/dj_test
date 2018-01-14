@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DjTest</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="body">
+  <div class="main_content">
+    <div class="ui main_panel">
+
+      <!--header-->
+
+      <div class="ui secondary inverted teal menu">
+        <%
+          @left_elements = [{name: 'DJ TEST', path: '#', class: 'item site_name'}]
+            @right_elements = [{
+                                   name: 'New Order',
+                                   path: new_order_path,
+                                   class: "item"
+                               },
+                               {
+                                   name: 'Orders List',
+                                   path: orders_path,
+                                   class: "item"
+                               }]
+
+        %>
+        <% @left_elements.each do |left_element| %>
+          <%= link_to(left_element[:name], left_element[:path],
+                      class: left_element[:class]) %>
+        <% end %>
+        <div class="right menu main_panel_right_menu">
+          <% @right_elements.each do |right_element| %>
+            <%= link_to(right_element[:name], right_element[:path],
+                        class: right_element[:class]) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <!--header-->
+
+    <%= yield %>
+  </div>
+  <div class="ui footer centered stroke">
+    <div class="ui horizontal inverted small divided link list footer_links">
+      <a class="item" href="#">Site Map</a>
+      <a class="item" href="#">Contact Us</a>
+      <a class="item" href="#">Terms and Conditions</a>
+      <a class="item" href="#">Privacy Policy</a>
+    </div>
+  </div>
+  </body>
+</html>

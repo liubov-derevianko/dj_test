@@ -1,0 +1,13 @@
+
+<div class="ui container">
+  <div class="ui piled segment">
+    <h2 class="ui centered header">Order info</h2>
+    <div class="ui divider"></div>
+    <% @orders.each do |order| %>
+      <div>
+        <%= link_to "#{order.name}", order_path(order.id) %>
+        <div class="ui divider"></div>
+      </div>
+    <%end%>
+  </div>
+</div>
