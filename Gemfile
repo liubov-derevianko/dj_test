@@ -17,6 +17,7 @@ gem 'sidekiq'
 gem 'twilio-ruby'
 gem 'dotenv-rails'
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+gem 'event_bus'
 # Trailblazer
 gem 'trailblazer'
 gem 'reform-rails'

@@ -21,8 +21,9 @@ module Core
       end
 
       def notify_user(options, params:, **)
-        NotificationJob.perform_later(options['model'])
-        UserMailer.status_changed_email(options['model']).deliver_later
+        EventBus.announce(:order_state_changed, order: options['model'])
+        # NotificationJob.perform_later(options['model'])
+        # UserMailer.status_changed_email(options['model']).deliver_later
       end
     end
   end
